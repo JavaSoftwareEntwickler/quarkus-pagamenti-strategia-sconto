@@ -1,5 +1,8 @@
 # quarkus-pagamenti-strategia-sconto
 
+Questo progetto implementa un esempio di Strategye e Factory Design Pattern con Quarkus, 
+consentendo di gestire sconti e vari metodi di pagamento in modo dinamico.
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
