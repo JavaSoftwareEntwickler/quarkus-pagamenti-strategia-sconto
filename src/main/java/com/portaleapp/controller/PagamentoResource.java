@@ -26,7 +26,9 @@ public class PagamentoResource {
         double prezzoConSconto = strategiaSconto.applicaSconto(pagamento.getPrezzo());
         boolean pagamentoEffettuato = strategiaPagamento.eseguiPagamento(prezzoConSconto);
         if (pagamentoEffettuato) {
-            return "Pagamento processato con successo! Prezzo finale: " + prezzoConSconto;
+            String metodoOutput = strategiaPagamento.getClass().getSimpleName().replace("Pagamento", "").replace("_ClientProxy", "");
+            String tipoScontoOutput = strategiaSconto.getClass().getSimpleName() .replace("Sconto", "").replace("_ClientProxy", "");
+            return "Pagamento processato con successo!\nMetodo usato: "+metodoOutput+".\nTipo di sconto: "+tipoScontoOutput+".\nPrezzo finale: " + prezzoConSconto ;
         } else {
             return "Errore nel pagamento.";
         }
